@@ -7,7 +7,8 @@ function TaskList({tasks,onDelete}) {
       {tasks.map((task)=>(
         <Task
         key={task.text}
-        task={task}
+        text={task.text}
+        category={task.category}
         onDelete={onDelete}
         />
       ))}
