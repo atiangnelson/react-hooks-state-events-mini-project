@@ -10,17 +10,17 @@ console.log({ CATEGORIES, TASKS });
 
 
 function App() {
-  const[tasks,setTask]=useState(TASKS)
+  const[tasks,setTasks]=useState(TASKS)
   const[selectedCategory,setSelectedCategory]=useState("All")
   function handleDelete(taskText){
-    setTask(tasks.filter(task=>task.text!==taskText))
+    setTasks(tasks.filter(task=>task.text!==taskText))
   }
   function handleCategoryClick(category){
     setSelectedCategory(category)
 
   }
   function handleAddTask(newTask){
-    setTask([...tasks,newTask])
+    setTasks([...tasks,newTask])
   }
   const filteredTasks=selectedCategory=='All'? tasks : tasks.filter(task=>task.category===selectedCategory)
   return (

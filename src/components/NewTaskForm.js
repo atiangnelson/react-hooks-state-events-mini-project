@@ -2,13 +2,13 @@ import React, { useState } from "react";
 
 function NewTaskForm({categories,onTaskSubmit}) {
   const[text,setText]=useState('')
-  const[category,setCategory]=useState(categories.length > 1 ? categories[1] : 'All')
+  const[category,setCategory]=useState( categories[1])
   function handleSubmit(e){
     e.preventDefault()
     const newTask={text,category}
   onTaskSubmit(newTask)
   setText('')
-  setCategory(categories.length > 1 ? categories[1] : 'All')
+  setCategory( categories[1] )
   }
   
   
